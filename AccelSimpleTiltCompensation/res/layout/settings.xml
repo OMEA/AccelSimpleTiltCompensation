@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_dialog_root_element"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Draw Axes"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#FFFFFFFF" />
+
+            <ToggleButton
+                android:id="@+id/xaxistogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="X-Axis Off"
+                android:textOn="X-Axis On" />
+
+            <ToggleButton
+                android:id="@+id/yaxistogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="Y-Axis Off"
+                android:textOn="Y-Axis On" />
+
+            <ToggleButton
+                android:id="@+id/zaxistogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="Z-Axis Off"
+                android:textOn="Z-Axis On" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Draw Data"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#FFFFFFFF" />
+
+            <ToggleButton
+                android:id="@+id/gravitytogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="Gravity Off"
+                android:textOn="Gravity On" />
+
+            <ToggleButton
+                android:id="@+id/rawtogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="Raw Off"
+                android:textOn="Raw On" />
+
+            <ToggleButton
+                android:id="@+id/linearacceltogglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onToggleClicked"
+                android:textOff="Accel Off"
+                android:textOn="Accel On" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Draw Filter"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Done" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
