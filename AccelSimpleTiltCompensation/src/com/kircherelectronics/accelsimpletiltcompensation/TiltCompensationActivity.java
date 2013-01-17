@@ -1,10 +1,5 @@
 package com.kircherelectronics.accelsimpletiltcompensation;
 
-import org.apache.commons.math3.linear.Array2DRowRealMatrix;
-import org.apache.commons.math3.linear.ArrayRealVector;
-import org.apache.commons.math3.linear.RealMatrix;
-import org.apache.commons.math3.linear.RealVector;
-
 import com.androidplot.xy.XYPlot;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -45,25 +40,12 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
  */
 
 /**
- * Plots the acceleration in the x, y and z axes. The raw acceleration from the
- * device sensor can be plotted, the Cardan angle implementation can be used to
- * separate the gravity and linear acceleration components of the signal.Any
- * vector sensor measuring a known, constant, homogonous field may be used to
- * solved for an orientation relative to that filed. However, for any given
- * measurement there will not be a unique sensor orientation solution, instead
- * there will be infinite solutions represented by all those orientations
- * achieved by the rotation the true orientation around an axis parallel with
- * the field. An accelerometer alone will tell you pitch and roll; not yaw
- * because gravity is parallel to yaw (z) and a magnetometer alone will tell you
- * roll and yaw; not pitch because the Earth’s magnetic field is parallel to
- * pitch (x)*.
- * 
- * This has the unfortunate consequence of not being able to calculate the pitch
- * of the device while it is experiencing linear acceleration.
+ * Plots the acceleration in the x, y and z axes. The linear acceleration is determined
+ * by subtracting the acceleration from itself when it is determined that the device
+ * is not experiencing linear acceleration.
  * 
  * @author Kaleb@KircherElectronics
  * @version 1.0
- * @see http://developer.android.com/guide/topics/ui/controls/togglebutton.html
  */
 public class TiltCompensationActivity extends Activity implements
 		SensorEventListener, OnSeekBarChangeListener, OnTouchListener
